@@ -46,7 +46,8 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffcc00;                    /* efecto al pasar el mouse */
+    color: #BD1B2B;
+    transition: color 0.3s; /* transición suave */                     /* efecto al pasar el mouse */
 }
 
         .hero {
@@ -112,8 +113,13 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-.card:hover{
-    transform:scale(1.05);
+/* Cards de precios: hover rojo y letras blancas */
+.services .card:hover {
+    background: #BD1B2B;       /* rojo personalizado */
+    color: white;               /* letras blancas */
+    transform: scale(1.05);     /* mantiene zoom */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.35); /* sombra más intensa */
+    transition: all 0.3s;       /* transición suave */
 }
 
         footer{
@@ -163,7 +169,10 @@ nav a:hover {
 <body>
 
 <header>
-    <h1>V i l l a d i e g o   A r t</h1>
+     <div class="header-top">.</div>
+    <div class="header-top">V I L L A D I E G O</div>
+    <div class="header-bottom">A R T</div>
+    <div class="header-top">.</div>
 </header>
 
 <nav>
@@ -173,7 +182,7 @@ nav a:hover {
 </nav>
 
 <div class="hero">
- elegancia, presencia y esencia.
+ Elegancia, presencia y esencia
 </div>
 
 <div class="section">
