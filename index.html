@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VILLADIEGO ART</title>
+
+    <style>
+
+        body{
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header{
+            background:black;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        nav{
+            background:#333;
+            padding:10px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            margin:0 15px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .hero{
+    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("imagenes/VILLADIEGOART.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    height:400px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:40px;
+    font-weight:bold;
+}
+
+        .section{
+            padding:40px;
+            text-align:center;
+        }
+
+        .services{
+            display:flex;
+            justify-content:center;
+            gap:30px;
+        }
+
+        .card{
+    background:#f2f2f2;
+    padding:25px;
+    width:220px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    transition:transform 0.3s;
+}
+.galeria{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.galeria img{
+    width:250px;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+        footer{
+            background:black;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        @media (max-width:768px){
+
+    .services{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero{
+        font-size:28px;
+        text-align:center;
+        padding:20px;
+    }
+
+}
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 20px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>VILLADIEGO ART</h1>
+</header>
+
+<nav>
+    <a href="#">Inicio</a>
+    <a href="#">Servicios</a>
+    <a href="#">Contacto</a>
+</nav>
+
+<div class="hero">
+ porte, presencia y esencia.
+</div>
+
+<div class="section">
+    <h2>Galería de Cortes</h2>
+
+    <div class="galeria">
+
+        <img src="imagenes/corte1.jpg" alt="corte 1">
+        <img src="imagenes/corte2.jpg" alt="corte 2">
+        <img src="imagenes/corte3.jpg" alt="corte 3">
+
+    </div>
+
+</div>
+
+<div class="section">
+    <h2>Servicios</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>Corte</h3>
+            <p>$18.000</p>
+        </div>
+
+        <div class="card">
+            <h3>Barba</h3>
+            <p>$12.000</p>
+        </div>
+
+        <div class="card">
+            <h3>Corte + Barba</h3>
+            <p>$30.000</p>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="section">
+    <h2>Contacto</h2>
+    <p>Teléfono: 310 592 4616</p>
+    <p>La Apartada - Coordoba</p>
+</div>
+
+<footer>
+    © 2026 VilladiegoArt
+</footer>
+
+<a class="whatsapp" href="https://wa.me/573000000000" target="_blank">
+WhatsApp
+</a>
+
+</body>
+</html>
