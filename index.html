@@ -11,15 +11,17 @@
         body{
             margin:0;
             font-family: Arial, Helvetica, sans-serif;
-            padding-top:60px;
+            
         }
 
     header {
         
     display: block;                  /* asegura que sea un bloque */
     width: 100%;                      /* ocupe todo el ancho */
-    background: black;                /* fondo negro */
+    background: #BD1B2B ;                /* fondo negro */
     color: white;
+    padding-top:90px;
+padding-bottom:20px;
     padding: 20px 0;                  /* espacio arriba y abajo */
     text-align: center;
     font-family: 'Texturina', serif;
@@ -44,16 +46,16 @@ letter-spacing:6px;
     letter-spacing:6px;
 }
 
-     nav {
-    background: white;                 /* fondo blanco */
+    nav {
+    background: white;
     padding: 10px 0;
     text-align: center;
-    font-family: 'Texturina', serif;   /* mantiene la fuente elegante */
+    font-family: 'Texturina', serif;
     width: 100%;
-    position: fixed;                   /* barra fija */
+    position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* sombra sutil */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 nav a {
@@ -71,7 +73,7 @@ nav a:hover {
 
         .hero {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url("imagenes/VILLADIEGOART.jpeg");
+                url("imagenes/VILLADIEGOART.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -89,8 +91,7 @@ nav a:hover {
     font-size: 40px;                 /* tamaño del texto */
     font-weight: 400;                /* menos gruesa */
 
-    /* Ajuste para navbar fija */
-    margin-top: 50px;                /* deja espacio para que no quede debajo del nav */
+
 }
 
         .section{
@@ -236,8 +237,8 @@ color:black;
 
 <header>
     <div class="logo">
-        <div class="logo-top">VILLADIEGO</div>
-        <div class="logo-bottom">ART</div>
+        <div class="logo-top">V I L L A D I E G O</div>
+        <div class="logo-bottom">A R T</div>
     </div>
 </header>
 
