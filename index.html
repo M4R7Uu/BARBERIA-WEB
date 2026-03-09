@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VILLADIEGO ART</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap" rel="stylesheet">
     <style>
 
         body{
@@ -12,41 +13,64 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        header{
-            background:black;
-            color:white;
-            padding:20px;
-            text-align:center;
-        }
+    header {
+    display: block;                  /* asegura que sea un bloque */
+    width: 100%;                      /* ocupe todo el ancho */
+    background: black;                /* fondo negro */
+    color: white;
+    padding: 20px 0;                  /* espacio arriba y abajo */
+    text-align: center;
+    font-family: 'Texturina', serif;
+    font-weight: 400;
+    font-size: 50px;
+}
 
-        nav{
-            background:#333;
-            padding:10px;
-            text-align:center;
-        }
+     nav {
+    background: white;                 /* fondo blanco */
+    padding: 10px 0;
+    text-align: center;
+    font-family: 'Texturina', serif;   /* mantiene la fuente elegante */
+    width: 100%;
+    position: fixed;                   /* barra fija */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* sombra sutil */
+}
 
-        nav a{
-            color:white;
-            margin:0 15px;
-            text-decoration:none;
-            font-weight:bold;
-        }
+nav a {
+    color: black;                      /* letras negras */
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
 
-        .hero{
-    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url("imagenes/VILLADIEGOART.jpeg");
+nav a:hover {
+    color: #ffcc00;                    /* efecto al pasar el mouse */
+}
 
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+        .hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url("imagenes/VILLADIEGOART.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
 
-    height:400px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:white;
-    font-size:40px;
-    font-weight:bold;
+    /* Centrado de texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* Fuente y estilo del texto */
+    color: white;
+    font-family: 'Texturina', serif; /* fuente aplicada */
+    font-size: 40px;                 /* tamaño del texto */
+    font-weight: 400;                /* menos gruesa */
+
+    /* Ajuste para navbar fija */
+    margin-top: 50px;                /* deja espacio para que no quede debajo del nav */
 }
 
         .section{
@@ -75,12 +99,17 @@
     flex-wrap:wrap;
 }
 
-.galeria img{
+.galeria .card img{
     width:250px;
     height:180px;
     object-fit:cover;
     border-radius:10px;
     box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.galeria .card:hover img{
+    transform: scale(1.05);
 }
 
 .card:hover{
@@ -109,34 +138,42 @@
 
 }
 .whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px 20px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:bold;
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;                 /* mantiene tu radio redondeado */
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* sombra tipo card */
+    transition: transform 0.3s, box-shadow 0.3s; /* efecto suave al pasar el mouse */
 }
+
+
+.whatsapp:hover {
+    transform: scale(1.05);                 /* efecto zoom como las cards */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.35); /* sombra más intensa al hover */
+}
+
     </style>
 </head>
 
 <body>
 
 <header>
-    <h1>VILLADIEGO ART</h1>
+    <h1>V i l l a d i e g o   A r t</h1>
 </header>
 
 <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Servicios</a>
-    <a href="#">Contacto</a>
+      <a href="#">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
 </nav>
 
 <div class="hero">
- porte, presencia y esencia.
+ elegancia, presencia y esencia.
 </div>
 
 <div class="section">
@@ -144,15 +181,23 @@
 
     <div class="galeria">
 
-        <img src="imagenes/corte1.jpg" alt="corte 1">
-        <img src="imagenes/corte2.jpg" alt="corte 2">
-        <img src="imagenes/corte3.jpg" alt="corte 3">
+    <div class="card">
+        <img src="imagenes/corte1.jpeg" alt="">
+    </div>
 
+    <div class="card">
+        <img src="imagenes/corte2.jpeg" alt="">
+    </div>
+
+    <div class="card">
+        <img src="imagenes/corte3.jpeg" alt="">
     </div>
 
 </div>
 
-<div class="section">
+</div>
+
+<div class="section" id="servicios">
     <h2>Servicios</h2>
 
     <div class="services">
@@ -176,19 +221,17 @@
 
 </div>
 
-<div class="section">
+<div class="section" id="contacto">
     <h2>Contacto</h2>
     <p>Teléfono: 310 592 4616</p>
-    <p>La Apartada - Coordoba</p>
+    <p>La Apartada - Cordoba</p>
 </div>
 
 <footer>
     © 2026 VilladiegoArt
 </footer>
 
-<a class="whatsapp" href="https://wa.me/573000000000" target="_blank">
-WhatsApp
-</a>
+<a class="whatsapp" href="https://wa.me/573105924616" target="_blank">WhatsApp</a>
 
 </body>
 </html>
