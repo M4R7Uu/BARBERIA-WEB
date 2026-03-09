@@ -162,6 +162,31 @@ nav a:hover {
     transform: scale(1.05);                 /* efecto zoom como las cards */
     box-shadow: 0 6px 15px rgba(0,0,0,0.35); /* sombra más intensa al hover */
 }
+/* animación inicial */
+.anim-scroll{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.6s ease;
+}
+
+/* cuando aparece en pantalla */
+.anim-scroll.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* cards de precios activas por scroll */
+.services .card.scroll-rojo{
+background:#BD1B2B;
+color:white;
+transition:background 0.8s ease, color 0.8s ease, transform 0.6s ease;
+}
+
+/* en PC al pasar cursor vuelve al color original */
+.services .card.scroll-rojo:hover{
+background:#f2f2f2;
+color:black;
+}
 
     </style>
 </head>
@@ -241,6 +266,40 @@ nav a:hover {
 </footer>
 
 <a class="whatsapp" href="https://wa.me/573105924616" target="_blank">WhatsApp</a>
+
+<script>
+
+const cards = document.querySelectorAll(".card");
+const precioCards = document.querySelectorAll(".services .card");
+
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+if(entry.target.closest(".services")){
+entry.target.classList.add("scroll-rojo");
+}
+
+}else{
+
+if(entry.target.closest(".services")){
+entry.target.classList.remove("scroll-rojo");
+}
+
+}
+
+});
+},{threshold:0.3});
+
+cards.forEach(card=>{
+card.classList.add("anim-scroll");
+observer.observe(card);
+});
+
+</script>
 
 </body>
 </html>
